@@ -15,37 +15,37 @@ A robust pipeline for constructing mosaic reference standards. The reference sta
 
 ## 1. Genotyping six cell lines
 
-#### A. Germline variant calling
+  #### A. Germline variant calling
 
-  - Alignment and preprocessings
-  - Strelka2 
-  - DeepVariant 
-  - CNVkit   
+    - Alignment and preprocessings
+    - Strelka2 
+    - DeepVariant 
+    - CNVkit   
   
-#### B. Generating candiates 
+  #### B. Generating candiates 
 
-  - Positive controls 
-    + mutually exclusive germline variants    
+    - Positive controls 
+      + Mutually exclusive germline variants    
     
-  - Negative controls   
-    + common wildtype positions (Set A)   
-    + MRC5 germine variants (Set B)   
+    - Negative controls   
+      + Common wildtype positions (Set A)   
+      + MRC5 germine variants (Set B)   
     
 ## 2. Generating Set B 
 
-  - down-sampling of MRC5 (39 times with random seeds) 
-  - Extraction of reads embedding positive controls from Set A
-  - Replacement of extracted reads to MRC5 down-sampled data
+    - Down-sampling of MRC5 (39 times with random seeds) 
+    - Extraction of reads embedding positive controls from Set A
+    - Replacement of extracted reads to MRC5 down-sampled data
 
 ## 3. Finalizing the reference standards
 
-#### A. pileup for post-filters
+  #### A. Pileup for post-filters
 
-#### B. Apply post-filters
+  #### B. Apply post-filters
 
-  - sequencing coverage
-  - variant coverage
-  - high-quality alternative alleles
+    - Sequencing coverage
+    - Variant coverage
+    - High-quality alternative alleles
 
     
     
