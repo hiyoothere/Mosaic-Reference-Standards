@@ -17,8 +17,8 @@ TGT_DEP=1100
 PICARD="/opt/Yonsei/Picard/2.23.1/picard.jar"
 GATK="/data/project/MRS/Resource/gatk-4.1.4.1/gatk"
 OUT_SUB_ARR=("a.pc_cand" "b.pc_rem_base" "c.pc_ext_src" "d.merged" "e.iv_ext_reg")
-reg_file=$(ls "${OUT_DIR}/${OUT_SUB_ARR[0]}" | egrep "M${INPUT:1:1}.*vcf")
-REG_FILE="${OUT_DIR}/${OUT_SUB_ARR[0]}/${reg_file}"
+pc_file=$(ls "${OUT_DIR}/${OUT_SUB_ARR[0]}" | egrep "M${INPUT:1:1}.*vcf")
+PC_FILE="${OUT_DIR}/${OUT_SUB_ARR[0]}/${pc_file}"
 
 
 echo "# Step 1: Downsample base (MRC5/S0) bam file"
@@ -45,7 +45,7 @@ out_head="${OUT_DIR}/${OUT_SUB_ARR[1]}/${SAMP_ID}.ds_base.${DEP}x.sd${SEED}.tp_r
 bedtools --version
 samtools --verison
 
-bedtools intersect -v -a "${out_dir}/${SAMP_ID}.ds_base.${DEP}x.sd${SEED}.bam" -b "${REG_FILE}" > "${out_head}.bam"
+bedtools intersect -v -a "${out_dir}/${SAMP_ID}.ds_base.${DEP}x.sd${SEED}.bam" -b "${PC_FILE}" > "${out_head}.bam"
 samtools sort -o "${out_head}.bam" "${out_head}.s.bam"
 samtools index "${out_head}.s.bam"
 
@@ -55,7 +55,7 @@ out_head="${OUT_DIR}/${OUT_SUB_ARR[2]}/${SAMP_ID}.tp_ext"
 bedtools --version
 samtools --verison
 
-bedtools intersect -a "${SRC_BAM}" -b "${REG_FILE}" > "${out_head}.bam"
+bedtools intersect -a "${SRC_BAM}" -b "${PC_FILE}" > "${out_head}.bam"
 samtools view -h "${out_head}.bam" | less | sed -e "s/^[^@]/RS/" | samtools view -b > "${out_head}.qt_renamed.bam"
 samtools sort -o "${out_head}.qt_renamed.bam" "${out_head}.qt_renamed.s.bam"
 samtools index "${out_head}.qt_renamed.s.bam"
