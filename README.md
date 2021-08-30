@@ -7,7 +7,7 @@ Construction of mosaic reference standards
 <br/>
 Introduction
 ------------
-A robust pipeline for constructing mosaic reference standards. The reference standards are consisting of XXXX mosaic SNVs and INDELs in a wide range of variant allele frequencies, from 0.1% to 56%. Negative controls of wild-type positions and germline vairants are accompanied with abundant positive controls. The reference stands were constructed by mixing genetic materials of pre-genotped, six normal cell lines 
+A robust pipeline for constructing mosaic reference standards. The reference standards are consisting of 386,613 mosaic SNVs and INDELs in a wide range of variant allele frequencies, from 0.5% to 56%. Negative controls of non-variant positions (35,113,417) and germline vairants (19,936) are accompanied with abundant positive controls. The reference standards were constructed by mixing genetic materials of six pre-genotyped normal cell lines, mimicking the cumulative aspect of mosaic variant acquisition in the early development.
 <br/>
    
    
