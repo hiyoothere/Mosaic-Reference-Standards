@@ -4,6 +4,7 @@
 PROJ_DIR="$HOME"
 SCRIPT_DIR="$PWD"
 DATA_DIR="${PROJ_DIR}/Sect1.B/1.germline_gt_res"
+MIX_SAMP_EXT_REG="$HOME/all_samp.iv_mx.ext.merged.sorted.block.bed"
 OUT_DIR="${PROJ_DIR}/Sect1.B/2.ctrl_cand_preprocessing"
 OUT_SUB_ARR=("a.nonvar_preprocessing" "b.var_preprocessing" "c.comb_cell_line_gt_res" "d.comb_tool_gt_res")
 TOOL_ARR=("sk" "dv")
@@ -113,4 +114,5 @@ echo "# Step 5-C: NC GL"
 sk_s0_pass_file="${OUT_DIR}/${OUT_SUB_ARR[1]}/sk/S0.variants.pass.vcf"
 dv_s0_pass_file="${OUT_DIR}/${OUT_SUB_ARR[1]}/dv/S0.variants.pass.vcf"
 bash "${SCRIPT_DIR}/1.B.5-c.pipe_Generate_NC_GL_Cand.sh" \
-"${sk_s0_pass_file}" "${dv_s0_pass_file}" "${OUT_DIR}/${OUT_SUB_ARR[3]}/${CTRL_ARR[2]}"
+"${sk_s0_pass_file}" "${dv_s0_pass_file}" "${MIX_SAMP_EXT_REG}"\
+"${OUT_DIR}/${OUT_SUB_ARR[3]}/${CTRL_ARR[2]}"
