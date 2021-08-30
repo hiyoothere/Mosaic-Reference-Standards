@@ -1,4 +1,4 @@
-"""Collection of functions to aid processing pup. files."""
+"""Collection of functions to aid processing pileup files."""
 
 
 # Import Modules
