@@ -22,4 +22,5 @@ smart_pileup() {
 
 echo "** Input: ${IN_BAM}"
 echo "** Output: ${OUT_PUP}"
+samtools --version
 smart_pileup $IN_BAM $REF $OUT_PUP
