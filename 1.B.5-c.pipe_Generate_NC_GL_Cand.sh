@@ -10,7 +10,7 @@ OUT_DIR=$3
 SCRIPT_DIR="$PWD"
 
 echo "## Step 5-C-1"
-python3 "${SCRIPT_DIR}/1.B.5.Merge_Combined_Genotyping_For_All_Tools.py" \
+python3 "${SCRIPT_DIR}/1.B.5.pipe_Merge_Combined_Genotyping_For_All_Tools.py" \
 "${SK_PASS_FILE}" "${DV_PASS_FILE}" "${OUT_DIR}" "sk_dv.conc"
 
 echo "## Step 5-C-2"

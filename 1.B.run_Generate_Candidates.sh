@@ -104,7 +104,7 @@ bash "${SCRIPT_DIR}/1.B.5-a.pipe_Generate_PC_Cand.sh" \
 echo "# Step 5-B: NC WT"
 sk_nc_wt_file="${OUT_DIR}/${OUT_SUB_ARR[2]}/sk/nc_wt.vcf"
 dv_nc_wt_file="${OUT_DIR}/${OUT_SUB_ARR[2]}/dv/nc_wt.vcf"
-python3 "${SCRIPT_DIR}/1.B.5.Merge_Combined_Genotyping_For_All_Tools.py" \
+python3 "${SCRIPT_DIR}/1.B.5.pipe_Merge_Combined_Genotyping_For_All_Tools.py" \
 "${sk_nc_wt_file}" "${dv_nc_wt_file}" \
 "${OUT_DIR}/${OUT_SUB_ARR[3]}/${CTRL_ARR[1]}" "sk_dv.conc"
 

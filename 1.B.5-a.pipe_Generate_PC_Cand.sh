@@ -17,7 +17,7 @@ bedtools --version
 sk_uniq_file="${OUT_DIR}/sk.uniq.${SK_CAND_FILE##*/}"
 dv_uniq_file="${OUT_DIR}/dv.uniq.${DV_CAND_FILE##*/}"
 conc_file="${OUT_DIR}/sk_dv.conc.${SK_CAND_FILE##*/}"
-python3 "${SCRIPT_DIR}/1.B.5.Merge_Combined_Genotyping_For_All_Tools" \
+python3 "${SCRIPT_DIR}/1.B.5.pipe_Merge_Combined_Genotyping_For_All_Tools.py" \
 "${SK_CAND_FILE}" "${DV_CAND_FILE}" "${OUT_DIR}" "sk_dv.conc"
 bedtools intersect -v -header -a "${SK_CAND_FILE}" -b "${DV_CAND_FILE}" > "${sk_uniq_file}"
 bedtools intersect -v -header -a "${DV_CAND_FILE}" -b "${SK_CAND_FILE}" > "${dv_uniq_file}"
