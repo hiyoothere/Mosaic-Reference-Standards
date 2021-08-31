@@ -10,6 +10,7 @@ Introduction
 A robust pipeline for constructing mosaic reference standards. The reference standards are consisting of 386,613 mosaic SNVs and INDELs in a wide range of variant allele frequencies, from 0.5% to 56%. Negative controls of non-variant positions (35,113,417) and germline variants (19,936 SNVs and INDELs) are accompanied with abundant positive controls. The reference standards were constructed by mixing genetic materials of six pre-genotyped normal cell lines, mimicking the cumulative aspect of mosaic variant acquisition in the early development.
 <br/>
    
+   [![DOI](https://zenodo.org/badge/401538167.svg)](https://zenodo.org/badge/latestdoi/401538167)
    
 <br/>
 
